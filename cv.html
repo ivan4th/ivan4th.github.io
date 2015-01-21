@@ -1,0 +1,456 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="all">
+    <title>Ivan Shvedunov's CV</title>
+    <style>
+      .container {
+        width: 730px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      #contacts {
+        text-align: center;
+      }
+
+      #contacts > a,
+      #contacts > span {
+        border: 1px solid #ccc;
+        padding: 2px 8px;
+        margin: 4px;
+        display: inline-block;
+        border-radius: 4px;
+      }
+
+      address {
+        font-style: italic;
+      }
+
+      section {
+        border-bottom: 1px solid #e5e5e5;
+        margin: 10px 0;
+      }
+
+      .job {
+        border: 1px solid #e5e5e5;
+        margin: 10px;
+        padding: 10px;
+      }
+
+      .job > h3 {
+        margin-top: 8px;
+      }
+
+      .job > div {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ivan Shvedunov</h1>
+
+      <section id="contacts">
+        <address>92-1-81 Kashirskoe shosse, 115551, Moscow, Russia<br/>
+          +7 (910) 454-6975<br/>
+        </address>
+        <span title="E-mail/Google Services">ivan4th AT gmail DOT com</span>
+        <a href="https://github.com/ivan4th" class="github">github.com/ivan4th</a>
+        <span>Skype:&nbsp;ivan.shvedunov</span>
+      </section>
+
+      <!-- TBD: validate & rm all comments -->
+
+      <section id="summary">
+        <h2>Summary</h2>
+        <p>An experienced developer with multiple qualifications.</p>
+      </section>
+
+      <section id="objective">
+        <h2>Objective</h2>
+        <p>A challenging and interesting job where I can apply and enhance my skills.</p>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <p class="sub">Languages:</p>
+        <ul class="compact">
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>C</li>
+          <li>C++</li>
+          <li>SQL (PostgreSQL, SQLite)</li>
+          <li>Common Lisp</li>
+          <li>Emacs Lisp</li>
+          <li>Go</li>
+          <li>QML</li>
+          <li>XSLT</li>
+          <li>bash</li>
+        </ul>
+        <p class="remark">
+          <em>
+            NOTE: didn't do any seriously template-heavy stuff in C++ lately. Have no
+            problems writing shell scripts but I don't necessarily know every bash
+            feature as I prefer not to write 1000+ LoC shell scripts.
+          </em>
+        </p>
+        <p class="sub">Previously used languages:</p>
+        <ul class="compact">
+          <li>Scheme (R5RS)</li>
+          <li>x86 assembly</li>
+          <li>ARM assembly</li>
+          <li>TransactSQL</li>
+          <li>C#</li>
+          <li>Perl</li>
+          <li>Object Pascal (Delphi)</li>
+          <li>VB.NET</li>
+          <li>XUL</li>
+        </ul>
+        <p class="sub">Libraries/frameworks/technologies:</p>
+        <ul>
+          <li>JavaScript: AngularJS, Backbone, jQuery, jQuery UI,
+            Prototype, Raphael, d3 (a bit), MathJax, Jasmine, lodash, Sugar</li>
+          <li>Python: lxml, Flask, Wekzeug, SQLAlchemy, injector, Routes,
+            xlwt/xlrd, BeautifulSoup, Paste</li>
+          <li>Common Lisp: Alexandria, Drakma, iolib, CommonQt, CXML &
+            related libs, CFFI, Closer to MOP, iterate, cl-who, cl-sqlite,
+            Postmodern, cl-ppcre, cl-async, blackbird, etc.</li>
+          <li>TCP/IP</li>
+          <li>Linux system administration</li>
+          <li>Embedded control systems</li>
+          <li>Qt (plain Qt, CommonQt, PyQt)</li>
+          <li>MODBUS</li>
+          <li>Microcontrollers: uIP embedded TCP/IP stack, FreeMODBUS, IAR IDE</li>
+          <li>Did a bit linux kernel programming (not too much during recent years)</li>
+          <li>VCS: git, svn, cvs</li>
+        </ul>
+      </section>
+
+      <section id="experience">
+        <h2>Professional experience</h2>
+        <div class="job job-current">
+          <h3><a href="http://contactless.ru/">Contactless, LLC (home automation)</a></h3>
+          <div>Programmer; Aug 2014 - present</div>
+          <ul>
+            <li>
+              Implemented Modbus/RTU
+              and <a href="smart.uniel.ru">Uniel</a> protocol to MQTT
+              <a href="https://github.com/contactless/wb-homa-drivers/tree/master/wb-homa-modbus">gateway</a> (<a href="https://github.com/contactless/wb-homa-drivers/tree/master/test">tests</a>) (C++).
+            </li>
+            <li>
+              Wrote an MQTT-based <a href="https://github.com/contactless/wb-homa-drivers/tree/master/wb-homa-adc">driver</a>
+              for <a href="http://contactless.ru/wiki/index.php/Wiren_Board_Smart_Home">WirenBoard</a>
+              ADC inputs (C++).
+            </li>
+            <li>
+              Wrote an MQTT-based <a href="https://github.com/contactless/wb-homa-drivers/tree/feature/smartbus/wb-homa-smartbus">driver</a>
+              for <a href="http://smarthomebus.com/">SmartBus</a>
+              devices (Go).
+            </li>
+            <li>
+              Implemented WirenBoard <a href="https://github.com/contactless/domoticz/blob/master/hardware/WBHomaBridge.cpp">integration</a>
+              for <a href="http://domoticz.com/">Domoticz</a> (C++; unfortunately, Domoticz has very unclean code base).
+            </li>
+            <li>
+              Implemented Zabbix integration for WirenBoard software
+              (shell scripts, Zabbix config).
+            </li>
+            <li>
+              Implemented ssh-based remote control for WirenBoard
+              relays (Python, shell scripts).
+            </li>
+          </ul>
+        </div>
+        <div class="job">
+          <h3><a href="http://internet-school.ru/">Teleshkola, Moscow, Russia</a></h3>
+          <div>Programmer, Team Lead later; May 2007 - Aug 2014</div>
+          <ul>
+            <li>
+              Implemented a new version (complete rewrite) of the
+              distance learning system (this new version is currently
+              used in many schools across the country).
+              Python/PostgreSQL/JS. The system has complicated
+              user/group hierarchy (single installation is often used
+              for a whole federal subject) and includes support for
+              specialized e-learning content in proprietary format,
+              forums, messaging and videoconferencing.
+            </li>
+            <li>
+              Implemented CMS for educational content backed by custom
+              versioning system and content addressable storage. The CMS
+              uses specialized extensible markup with rich library of
+              tags that represent tasks, multimedia objects, TeX formulas etc.
+            </li>
+            <li>
+              Implemented PostgreSQL-based business rule compiler
+              (it isn't directly related to PostgreSQL built-in rules).
+              Specialized rule language is converted to a set of
+              PostgreSQL triggers and stored procedures. This compiler is
+              used in the distance learning system to implement
+              complicated user/group relationship machinery.
+            </li>
+            <li>
+              Began refactoring of the backend of the distance learning
+              system and rewriting its frontend part using AngularJS.
+            </li>
+            <li>
+              Coordinated the development team, wrote documentation,
+              etc. An important characteristic of the development
+              process is good test coverage and use of CI
+              (Jenkins-based).
+            </li>
+            <li>
+              Implemented QtWebKit-based wrapper for WSGI-based Python
+              application that helps turn web apps into desktop apps.
+              The wrapper implements direct QNetworkManager &lt;-&gt; WSGI
+                interface that doesn't involve any network connections.
+            </li>
+            <li>
+              Wrote a Common Lisp application that converts the old
+              ASP.NET e-learning content to the new semantic XML
+              representation.  The old system used plain HTML that was
+              usually entered by CMS users without deep HTML/CSS/JS
+              knowledge and included arcane multi-level tables, broken
+              JS etc. I wrote an XML pattern matching library <a href="https://github.com/ivan4th/xml-match">xml-match</a>
+              to deal with this problem. It uses closure chain
+              based pattern compilation technique similar to
+              one used by cl-ppcre library.
+            </li>
+            <li>
+              Supported older ASP.NET version of the distance learning
+              system till it was replaced with the new one.
+            </li>
+          </ul>
+        </div>
+        <div class="job job-current">
+          <h3><a href="http://www.sinp.msu.ru/en">Skobeltsyn Institute of Nuclear Physics, Moscow State University</a></h3>
+          <div>Electron Accelerator Control System developer (side project); April 2007 - present</div>
+          <ul>
+            <li>
+              Implemented embedded control system & HMI software for
+              industrial electron accelerators.  The software works on
+              multiple platforms (Debian GNU/Linux on ARM, Linux x86,
+              HMI shell is also available for Windows), uses
+              Modbus/TCP and proprietary protocols to communicate with
+              controlled hardware. Real-time-critical parts of the
+              system are implemented using microcontrollers, the
+              toplevel control is implemented in Common Lisp using
+              Hierarchical Finite State Machine DSL. Clozure Common
+              Lisp is used for the system, earlier versions were
+              SBCL-based. HMI is based on CommonQt library, with
+              QWidget-based UI for advanced HMI and QML for the
+              control panel. The system includes extensive test suite
+              for everything including its HFSM-based control
+              algorithms. Three machines were built utilizing the
+              control system, one of which is presently used for X-Ray
+              nondestructive testing.
+            </li>
+            <li>
+              Helped developing the hardware part of the control system,
+              namely the control computer and HMI panel (LCD
+              connectivity debugging, I2C-related work, Linux kernel
+              driver for the keypad). These are based on Blueshark board
+              (a Russian BeagleBoard clone suitable for industrial
+              applications) and run Angstr&ouml;m Linux.
+            </li>
+            <li>
+              Ported CommonQt to ARM using OpenEmbedded framework
+              (had to write some complicated bitbake recipes).
+            </li>
+            <li>
+              Improved QML support in CommonQt
+              (see <a href="https://github.com/ivan4th/commonqt">my fork</a>).
+            </li>
+            <li>
+              Helped implement TCP/IP and Modbus/TCP on microcontrollers
+              used in the control system. Implemented Modbus/TCP ->
+              Modbus/RTU proxy on a STM32 microcontroller. Other than
+              that, microcontroller-level programming was done by other
+              engineers.
+            </li>
+            <li>
+              Implemented AngularJS HMI frontend for the system (WIP).
+            </li>
+          </ul>
+        </div>
+        <div class="job">
+          <h3><a href="http://www.douglasware.com/">douglasWare LLC, New York, NY</a></h3>
+          <div>Software Developer (side project, developed remotely); Feb. 2007 - Aug. 2008</div>
+          <ul>
+            <li>
+              Implemented "Grievances" AJAX-based web app that is used to track
+              driver grievances in a limo company (ASP.NET, MS SQL Server).
+            </li>
+          </ul>
+        </div>
+        <div class="job">
+          <h3><a href="http://compilesoft.ru/">Compile Group, Moscow, Russia</a></h3>
+          <div>Software Developer; Aug. 2003 - May 2007</div>
+          <ul>
+            <li>Developed an ASP.NET-based distance learning system.</li>
+            <li>Worked on ASP.NET / Microsoft SQL Server based ERP system.</li>
+            <li>Introduced version control (Subversion) and bug tracking practices at the company.</li>
+            <li>Network / Web server administration.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <h3><a href="http://www.sinp.msu.ru/en">Skobeltsyn Institute of Nuclear Physics, Moscow State University</a></h3>
+          <div>Research Projects; Sep. 1996 - Aug. 2003</div>
+          <ul>
+            <li>Developed a large part of control system for scientific
+	      particle accelerators (35 MeV and 70 MeV Race-Track
+	      Microtrons). The system consists of several diskless
+	      RTLinux PCs loaded with ADC and DAC cards that are
+	      connected to accelerator equipment and the central Linux
+	      workstation running GUI user shell. My part was Qt-based
+	      user shell, communication code for managing the diskless
+	      workstations and control code for some of these
+	      workstations.</li>
+            <li>Worked on beam optics calculation package BeamOptik
+	      (funded by Institut f&uuml;r Kernphysik, Johannes
+	      Gutenberg-Universit&auml;t Mainz, Germany). The original
+	      version had textual user interface, worked only under UNIX
+	      and had some deficiencies in its beam properties
+	      calculation engine. I've added GUI, Windows support, and
+	      made several important improvements to the engine
+	      (longitudinal beam properties). During one-month visit to
+	      Mainz I've connected BeamOptik to the control system
+	      of <a href="http://www.kph.uni-mainz.de/B1/">Mainz
+	        Microtron MAMI</a>.</li>
+            <li>Developed a program for interactive 3D simulation of
+	      magnetic dipole interaction that was presented at New
+	      Magnetic Materials for Microelectronics conference in
+	      1998.</li>
+            <li>Network / Web server administration.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="foss">
+        <h2>Free & Open Source software contributions</h2>
+        <ul>
+          <li>
+            <a href="https://github.com/swank-js/swank-js">SwankJS</a>
+            - Node.js-based SWANK backend for JavaScript. I'm the
+            initial developer and a contributor of the project. Used
+            it a lot over years.
+          </li>
+
+          <li>
+            <a href="https://github.com/ivan4th/karma-emacs">karma-emacs</a> -
+            WIP (Emacs integration for Karma, JavaScript test runner framework)
+          </li>
+
+          <li>
+            <a href="https://github.com/ivan4th/bangbang">bangbang</a>
+            - a simple MQTT-based hysteresis controller example in
+            Python that was used to drive an actual pump+water tank
+            device and a "ghetto" climate controller.
+          </li>
+
+          <li>
+            <a href="https://github.com/ivan4th/cl-mqtt">cl-mqtt</a> -
+            my cl-async based MQTT client written in Common Lisp.
+          </li>
+
+          <li>
+            <a href="https://github.com/orthecreedence/cl-async">cl-async</a>
+            (a Common Lisp async IO library based on libuv) - Unix
+            domain socket support, process support, SLIME REPL
+            integration and many other improvements (see my pull
+            requests listed
+            <a href="https://github.com/orthecreedence/cl-async/pulls?q=is%3Apr+is%3Aclosed">here</a>).
+          </li>
+
+          <li>
+            <a href="https://github.com/orthecreedence/blackbird">blackbird</a>
+            (a Common Lisp promise implementation) - bug fixes,
+            <a href="https://github.com/orthecreedence/blackbird/issues/2">design guidance</a>.
+          </li>
+
+          <li>
+            <a href="https://github.com/fukamachi/websocket-driver">websocket-driver</a>
+            (a Common Lisp WebSocket protocol implementation) - bug fixes, including
+            <a href="https://github.com/fukamachi/websocket-driver/commit/a5b5677779640a2dd04f6d250f5576f8eb0b49b6">fixes</a> for errors in the protocol implementation.
+          </li>
+
+          <li>
+            <a href="https://github.com/slime/slime">SLIME</a>
+            (The Superior Lisp Interaction Mode for Emacs) -
+            <a href="https://github.com/slime/slime/pull/215">fuzzy completion</a>
+            improvements and other fixes.
+          </li>
+
+          <li>
+            <a href="http://common-lisp.net/project/commonqt/">CommonQt</a>
+            contributions (the library is used for the control system
+            described above):
+            <ul>
+              <li>SLIME REPL integration</li>
+              <li>Improved QML support (implemented in <a href="https://github.com/ivan4th/commonqt">my fork</a>,
+                unfortunately didn't get around to merge them back</li>
+              <li>Convenient dynamic CONNECT function for signals/slots</li>
+              <li>Fixed fatal SIGCHLD handling problem</li>
+              <li>Many other miscellaneous improvements</li>
+            </ul>
+          </li>
+
+          <li>
+            Clozure Common Lisp - ARM related & other miscellaneous fixes, see tickets
+            <a href="http://trac.clozure.com/ccl/ticket/747">#747</a>,
+            <a href="http://trac.clozure.com/ccl/ticket/750">#750</a>,
+            <a href="http://trac.clozure.com/ccl/ticket/788">#788</a>,
+            <a href="http://trac.clozure.com/ccl/ticket/802">#802</a>,
+            <a href="http://trac.clozure.com/ccl/ticket/804">#804</a>,
+            <a href="http://trac.clozure.com/ccl/ticket/894">#894</a>,
+            commits
+            <a href="http://trac.clozure.com/ccl/changeset/14472">v14472</a>,
+            <a href="http://trac.clozure.com/ccl/changeset/14550">v14550</a>.
+          </li>
+
+
+          <li>
+            <a href="http://talk.maemo.org/showthread.php?t=42339">CLISP Maemo port</a>
+          </li>
+
+          <li>
+            <a href="http://common-lisp.net/project/plexippus-xpath/">Plexippus XPath</a>
+            (co-authored with David Lichteblau). Also,
+            participated in David's <a href="http://common-lisp.net/project/xuriella/">Xuriella</a>
+            project (Common Lisp XSLT engine) that greatly improved my XSLT skills.
+          </li>
+
+          <li>
+            <a href="https://github.com/ivan4th/xml-match">xml-match</a> -
+            an XML matcher that was used to convert ugly HTML to semantic XML
+            for distance learning system. Uses closure-based pattern compilation
+            similar to one used by cl-ppcre.
+          </li>
+
+          <li>
+            <a href="https://github.com/ivan4th/vtf">vtf</a> -
+            my Common Lisp test framework that implements so called
+            <a href="http://stackoverflow.com/questions/3779747/is-there-a-name-for-the-testing-technique-i-use">'Adaptive Baseline Testing'</a> paradigm.
+          </li>
+
+          <li>
+            (very old)
+            <a href="http://web.archive.org/web/19990117052145/http://rf-hp.npi.msu.su/kscan.html">KScan</a> -
+            my first FOSS project, KDE-based scanning program I wrote it
+            in 1998, the project is long dead (though parts of it did
+            survive for some time in kooka project).</li>
+        </ul>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <p>Moscow State University, Department of Physics, 1996-2001, MS in Physics</p>
+      </section>
+    </div>
+  </body>
+</html>
